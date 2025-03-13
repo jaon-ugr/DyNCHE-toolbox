@@ -24,7 +24,7 @@ struct param_const {
   int nmin;
   int nmax; 
   int N; //number of modes
-  //additional parameters for some trayectories
+  //additional parameters for some trajectories
   double t; 
   
 };
