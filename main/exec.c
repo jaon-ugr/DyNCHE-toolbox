@@ -34,10 +34,10 @@ main (void)
   char outfile1 [80];
   char outfile2 [80];
   char outfile3 [80];
-  double t0, tf;
   int nmin, nmax;
   int mode;//Initial state peaked on the mode = ...;
-  scanf ("%79s %79s %79s %d %d %d %lf %lf", outfile1, outfile2, outfile3, &nmin, &nmax, &mode, &t0, &tf);
+  scanf ("%79s %79s %79s %d %d %d %lf %lf", outfile1, outfile2, outfile3, &nmin, &nmax, &mode);
+  double t0, tf;//Initial and final times for the simulation to be fixed below.
   //DC trajectory
   //t0 = -3.0;
   //tf = 3.0;
