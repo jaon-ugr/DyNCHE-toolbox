@@ -17,5 +17,5 @@ Then, we run the script as
 
 ~ ./script.sh
 
-We get output files "alpha-n512-1.txt" "beta-n512-1.txt" and "norm-n512-1.txt" where it prints the alpha and beta Bogoliubov coefficients and the norm of the solutions at the end. 
+We get output files "alpha-n16-1.txt" "beta-n16-1.txt" and "norm-n16-1.txt" where it prints the alpha and beta Bogoliubov coefficients and the norm of the solutions at the end for 16 total modes and initial solution peaked at "in" mode number 1. For other "in" modes we can change the last number in the "script.sh" file, choosing any number between 1 to 16. We can change the total number of modes by changing "16" to some other number.
 
