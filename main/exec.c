@@ -42,9 +42,9 @@ main (void)
   //t0 = -3.0;
   //tf = 3.0;
   //FD trajectory
-  double dl = 0.25;
-  t0 = -0.3+(0.125/dl)*(0.125/dl)/10.0;
-  tf = 0.4 + dl;
+  double dl = 0.375;
+  t0 = -0.5+(0.125/dl)*(0.125/dl)/10.0;
+  tf = 0.7 + dl;
   struct param_const my_params = {1.0, 1.0, nmin, nmax, nmax-nmin};
 
   //Here we initialize the odes
