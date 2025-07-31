@@ -89,7 +89,7 @@ Ltft_FD (const double t, void *params, double ft[])
   double L0 = my_params_pointer->L0;
   double s = 12.5;
   double t1 = 1.0/8.0;
-  double dl = 0.25;
+  double dl = 0.375;
   double k = s / dl;
   double kt = k * (t - t1);
 
@@ -97,20 +97,20 @@ Ltft_FD (const double t, void *params, double ft[])
   //function ft
   
   //1 or 2 plates moving right
-  //double L, dL;
-  //double plt = 1.0;
-  //L = L0 + dl / 2.0 / plt * (1.0 + (-log(cosh(s - kt)) + log(cosh(kt))) / s);
-  //dL = (dl * (k * tanh(s - kt) + k * tanh(kt)))/(2.0 * plt * s);
+  double L, dL;
+  double plt = 1.0;
+  L = L0 + dl / 2.0 / plt * (1.0 + (-log(cosh(s - kt)) + log(cosh(kt))) / s);
+  dL = (dl * (k * tanh(s - kt) + k * tanh(kt)))/(2.0 * plt * s);
   
-  //ft[0] = 1.0 / L;
-  //ft[1] = dL * ft[0];
-  //ft[2] = (plt - 1.0) * dL * ft[0];
+  ft[0] = 1.0 / L;
+  ft[1] = dL * ft[0];
+  ft[2] = (plt - 1.0) * dL * ft[0];
   
 
   //2 plates moving oposite directions
-  double L, dL;
-  L = L0 + dl * (1.0 + (-log(cosh(s - kt)) + log(cosh(kt))) / s);
-  dL = (dl * (k * tanh(s - kt) + k * tanh(kt)))/(2.0 * s);
+  //double L, dL;
+  //L = L0 + dl * (1.0 + (-log(cosh(s - kt)) + log(cosh(kt))) / s);
+  //dL = (dl * (k * tanh(s - kt) + k * tanh(kt)))/(2.0 * s);
   
   //ft[0] = 1.0 / L;
   //ft[1] = 2.0 * dL * ft[0];
